@@ -8,24 +8,24 @@
     <!-- Meta tags para redes sociais -->
     <meta property="og:title" content="Barbearia Estilo Clássico | Araxá MG">
     <meta property="og:description" content="A melhor barbearia de Araxá e região. Cortes clássicos, barba e cuidados masculinos.">
-    <meta property="og:image" content="https://example.com/path/to/your/image.jpg">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1476&q=80">
     <meta property="og:url" content="https://www.barbeariaestiloclassico.com.br">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Barbearia Estilo Clássico | Araxá MG">
     <meta name="twitter:description" content="A melhor barbearia de Araxá e região.">
-    <meta name="twitter:image" content="https://example.com/path/to/your/image.jpg">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1476&q=80">
     
     <!-- Fonte Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* ESTILO PARA SCROLL SUAVE - ADICIONADO */
+        /* ESTILO PARA SCROLL SUAVE */
         html {
             scroll-behavior: smooth;
         }
         
-        /* Seus estilos existentes permanecem aqui */
+        /* Variáveis de cores */
         :root {
             --primary: #111111;
             --secondary: #2d2d2d;
@@ -42,7 +42,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             -webkit-tap-highlight-color: transparent;
         }
         
@@ -124,12 +124,17 @@
             gap: 8px;
         }
         
-        .logo img {
+        .logo-img {
             width: 40px;
             height: 40px;
             border-radius: 50%;
             border: 2px solid var(--accent);
-            object-fit: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--accent);
+            color: var(--primary);
+            font-size: 18px;
         }
         
         .logo h1 {
@@ -181,13 +186,16 @@
             transition: all 0.3s;
         }
         
-        /* Seção Hero - Altura reduzida */
+        /* Seção Hero */
         .hero {
-            min-height: 60vh;
+            min-height: 80vh;
             display: flex;
             align-items: center;
             padding: 90px 0 40px;
-            background: linear-gradient(135deg, rgba(17, 17, 17, 0.9) 0%, rgba(45, 45, 45, 0.8) 100%);
+            background: linear-gradient(rgba(17, 17, 17, 0.85), rgba(45, 45, 45, 0.85)), 
+                        url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1476&q=80');
+            background-size: cover;
+            background-position: center;
             text-align: center;
         }
         
@@ -381,11 +389,6 @@
         
         .carousel-img:hover img {
             transform: scale(1.05);
-        }
-        
-        .carousel-img i {
-            font-size: clamp(50px, 12vw, 60px);
-            color: var(--accent);
         }
         
         .carousel-content {
@@ -699,12 +702,10 @@
             gap: 8px;
         }
         
-        .footer-logo img {
+        .footer-logo .logo-img {
             width: 30px;
             height: 30px;
-            border-radius: 50%;
-            border: 2px solid var(--accent);
-            box-shadow: 0 2px 8px rgba(192, 192, 192, 0.3);
+            font-size: 14px;
         }
         
         .footer-logo span {
@@ -1031,7 +1032,9 @@
     <header>
         <div class="container">
             <div class="logo">
-                <img src="logo.png" alt="Barbearia Estilo Clássico">
+                <div class="logo-img">
+                    <i class="fas fa-cut"></i>
+                </div>
                 <h1>BARBEARIA CLÁSSICA</h1>
             </div>
             <button class="menu-toggle">
@@ -1048,7 +1051,7 @@
         </div>
     </header>
     
-    <!-- Hero Section MODIFICADA -->
+    <!-- Hero Section -->
     <section class="hero" id="hero">
         <div class="container">
             <div class="hero-content">
@@ -1110,7 +1113,7 @@
                     <!-- Corte de Cabelo -->
                     <div class="carousel-slide">
                         <div class="carousel-img">
-                            <img src="corte-cabelo.jpg" alt="Corte de Cabelo">
+                            <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Corte de Cabelo">
                         </div>
                         <div class="carousel-content">
                             <h3>Corte de Cabelo</h3>
@@ -1124,7 +1127,7 @@
                             </ul>
                             <!-- BOTÃO VER SERVIÇOS COMPLETOS ADICIONADO DENTRO DO RETÂNGULO -->
                             <div class="services-btn-container">
-                                <a href="servicos.html" class="services-btn">
+                                <a href="https://wa.me/553499269707?text=Olá! Gostaria de saber mais sobre os serviços da barbearia ✂️" class="services-btn">
                                     <i class="fas fa-list"></i> Ver Todos os Serviços
                                 </a>
                             </div>
@@ -1134,7 +1137,7 @@
                     <!-- Barba -->
                     <div class="carousel-slide">
                         <div class="carousel-img">
-                            <img src="barba.jpg" alt="Barba">
+                            <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1488&q=80" alt="Barba">
                         </div>
                         <div class="carousel-content">
                             <h3>Barba</h3>
@@ -1148,7 +1151,7 @@
                             </ul>
                             <!-- BOTÃO VER SERVIÇOS COMPLETOS ADICIONADO DENTRO DO RETÂNGULO -->
                             <div class="services-btn-container">
-                                <a href="servicos.html" class="services-btn">
+                                <a href="https://wa.me/553499269707?text=Olá! Gostaria de saber mais sobre os serviços da barbearia ✂️" class="services-btn">
                                     <i class="fas fa-list"></i> Ver Todos os Serviços
                                 </a>
                             </div>
@@ -1158,7 +1161,7 @@
                     <!-- Combo Completo -->
                     <div class="carousel-slide">
                         <div class="carousel-img">
-                            <img src="combo.jpg" alt="Combo Completo">
+                            <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Combo Completo">
                         </div>
                         <div class="carousel-content">
                             <h3>Combo Completo</h3>
@@ -1172,7 +1175,7 @@
                             </ul>
                             <!-- BOTÃO VER SERVIÇOS COMPLETOS ADICIONADO DENTRO DO RETÂNGULO -->
                             <div class="services-btn-container">
-                                <a href="servicos.html" class="services-btn">
+                                <a href="https://wa.me/553499269707?text=Olá! Gostaria de saber mais sobre os serviços da barbearia ✂️" class="services-btn">
                                     <i class="fas fa-list"></i> Ver Todos os Serviços
                                 </a>
                             </div>
@@ -1268,7 +1271,9 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="logo.png" alt="Barbearia Estilo Clássico">
+                    <div class="logo-img">
+                        <i class="fas fa-cut"></i>
+                    </div>
                     <span>BARBEARIA CLÁSSICA</span>
                 </div>
                 <div class="footer-contact">
